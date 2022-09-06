@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <td>
+          <label for="name">Name</label>
+        </td>
+        <td>
+          <input type="text" id="name" />
+        </td>
+        <tr>
+          <td>
+            <label for="alamat">Alamat</label>
+          </td>
+          <td>
+            <textarea type="" id="alamat"></textarea>
+          </td>
+        </tr>
+      </table>
+      <button id="submitData">Submit</button>
+    </form>
+    <br />
+    <div id="data"></div>
+  </body>
+  <script>
+    const submitData = document.getElementById("submitData");
+    const data = document.getElementById("data");
+    submitData.addEventListener("click", function (event) {
+      const name = document.getElementById("name").value;
+      const alamat = document.getElementById("alamat").value;
+      data.innerHTML = `Nama : ${name} <br /> Alamat : ${alamat}`;
+      console.log(data);
+    });
+  </script>
+</html>
